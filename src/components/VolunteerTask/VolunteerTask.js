@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './VolunteerTask.css';
 
 
 const VolunteerTask = ({ newTask }) => {
-  const date = newTask.startingDate;
-
-    const [update, setUpdate] = useState();
 
     const handleDeleteTask = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://blooming-refuge-85311.herokuapp.com/delete/${id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())

@@ -12,14 +12,16 @@ const Event = () => {
 
     const taskEvent = { ...data };
         
-    fetch('http://localhost:5000/newEvent', {
+    fetch('https://blooming-refuge-85311.herokuapp.com/newEvent', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(taskEvent),
     })
       .then((res) => res.json())
-        .then((data) => {
-          alert('Event successfully submitted but image issue thats why limited homepage task upload');
+      .then((data) => {
+        alert(
+          'Event successfully submitted but image issue thats why limited homepage task upload'
+        );
       });
   };
 

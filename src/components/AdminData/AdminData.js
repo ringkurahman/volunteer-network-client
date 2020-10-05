@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const AdminData = ({ newUser }) => {
     
   const handleDeleteTask = (id) => {
-    fetch(`http://localhost:5000/adminDelete/${id}`, {
+    fetch(`https://blooming-refuge-85311.herokuapp.com/adminDelete/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

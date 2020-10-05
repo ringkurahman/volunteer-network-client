@@ -12,7 +12,7 @@ const Admin = () => {
     const [allNewTask, setAllNewTask] = useState([])
 
     useEffect(() => {
-      fetch('http://localhost:5000/allVolunteer')
+      fetch('https://blooming-refuge-85311.herokuapp.com/allVolunteer')
         .then((res) => res.json())
         .then((data) => setAllNewTask(data));
     }, [allNewTask]);

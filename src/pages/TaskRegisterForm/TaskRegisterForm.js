@@ -16,15 +16,15 @@ const TaskRegisterForm = () => {
   const onSubmit = (data) => {
 
     const taskDetails = { photo, newVolunteer: data, startingDate: new Date() };
-    fetch('http://localhost:5000/newVolunteer', {
+    fetch('https://blooming-refuge-85311.herokuapp.com/newVolunteer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(taskDetails),
     })
-      .then(res => res.json())
-      .then(data => {
-      history.push('/task')
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        history.push('/task');
+      });
 
   };
 

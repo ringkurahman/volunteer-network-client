@@ -7,7 +7,7 @@ const VolunteerData = () => {
   const [allTasks, setAllTasks] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/tasks')
+    fetch('https://blooming-refuge-85311.herokuapp.com/tasks')
       .then((res) => res.json())
       .then((data) => setAllTasks(data));
   }, [])

@@ -10,10 +10,13 @@ const Task = () => {
   const [newTasks, setNewTasks] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/newVolunteer?email=' + loggedInUser.email)
+    fetch(
+      'https://blooming-refuge-85311.herokuapp.com/newVolunteer?email=' +
+        loggedInUser.email
+    )
       .then((res) => res.json())
       .then((data) => setNewTasks(data));
-  }, [])
+  }, [newTasks]);
 
   return (
     <div className='bg-light'>
